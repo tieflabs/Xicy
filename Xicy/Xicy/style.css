@@ -1,0 +1,216 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	background: var(--bg4);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+:root{
+	--black: #000;
+	--a: #007ad6;
+	--b: #00b5ef;
+
+	--bg: #19191b;
+	--bluetext: #5cc2edf0;
+	--white: #fff;
+
+	--barbg: #19191be3;
+	--bars: #8b8e94;
+
+	--bg1: url(images/1.jpg);
+	--bg2: url(images/2.jpg);
+	--bg3: url(images/3.jpg);
+	--bg4: url(images/4.jpg);
+	--bg5: url(images/5.jpg);
+}
+
+input[type="checkbox"]
+{   position: fixed;
+	height: 19px;
+	width: 19px;
+	-webkit-appearance: none;
+	transform: translate(182px, -288px);
+	z-index: 6;
+	cursor: pointer;
+}
+input[type="checkbox"]:hover.close:{
+	background: red;
+}
+
+input[type="checkbox"]:checked ~ .container
+{   
+	display: none;
+}
+
+.container{
+	height: 600px;
+	width: 400px;
+
+	/*-webkit-appearance: none;*/
+	/*background: var(--bg2);*/
+	background: var(--black);
+	background-repeat: no-repeat;
+	background-size: cover;
+	justify-content: center;
+	display: flex;
+	z-index: 5;    
+}
+/*----------For Desktop App----------*/
+.bar{
+	position: absolute;
+	height: 25px;
+	width: 400px;
+	background: var(--barbg);
+	align-items: center;
+	display: flex;
+	cursor: move;
+}
+.logobar{
+	height: 25px;
+	width: 25px;
+	opacity: 0.7;
+	cursor: move;
+}
+.textbar{
+	position: absolute;
+	font-size: 11px;
+	top: 3px;
+	opacity: 0.7;
+	margin-left: 27px;
+}
+.function{
+	position: absolute;
+	height: 25px;
+	width: 95px;
+	float: right;
+	right: 0;
+	align-items: center;
+	display: flex;
+	cursor: pointer;
+}
+.minmize{
+	position: absolute;
+    height: 1px;
+    width: 18px;
+    background: var(--bars);
+    right: 65px;
+    cursor: pointer;
+}
+.maxmize{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border: 1px solid var(--bars);
+    right: 38px;
+    cursor: pointer;
+}
+.close{
+    position: absolute;
+    height: 1px;
+    width: 19px;
+    background: var(--bars);
+    right: 10px;
+    transform: rotate(40deg);
+    cursor: pointer;
+}
+.close::after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 20px;
+    background: var(--bars);
+    right: 0px;
+    transform: rotate(90deg);
+    cursor: pointer;
+}
+/*--------------------------------------------*/
+.logo{
+	box-shadow: -5px 1px 100px var(--black);
+	cursor: pointer;
+	height: 150px;
+	width: 150px;
+	background: linear-gradient(50deg, #007ad6, #00b5ef);
+	margin-top: 20%;
+	border-radius: 50%;
+	text-align: center;
+}
+.logo::before{
+	position: absolute;
+	content: "";
+    height: 70px;
+	width: 70px;
+	background: blue;
+	border-radius: 50%;
+	margin-top: 10px;
+	margin-left: -84px;
+	z-index:-1;
+}
+.logo::after{
+	position: absolute;
+	content: "";
+    height: 70px;
+	width: 70px;
+	background: linear-gradient(#007ad6, #00b5ef);
+	border-radius: 50%;
+	margin-top: -40px;
+	margin-left: 10px;
+	z-index:-2;
+}
+h3{
+	font-size: 70px;
+	font-family: fantasy;
+	color: var(--white);
+	margin-top: 20%;
+}
+.welcome{
+	position: absolute;
+	margin-top: 350px;
+}
+h1{
+	font-size: 30px;
+	text-align: center;
+	color: var(--white);
+	font-family: "Poppins", sans-serif;
+	text-shadow: 1px 1px 50px var(--black);
+}
+p{
+	font-size: 13px;
+	text-align: center;
+	color: white;
+	font-weight: 800;
+	font-family: cursive;
+	text-shadow: 1px 1px 60px var(--black);
+}
+.btn{
+	position: absolute;
+	width: 240px;
+	height: 40px;
+	background: linear-gradient(60deg,#007ad6 10%, #00b5ef);
+	border-radius: 20px;
+	margin-top: 500px;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+.btn:hover{
+	transition: 0.2s;
+	box-shadow: 1px 1px 10px var(--white);
+	border: 1px solid var(--bluetext)
+}
+a,h4{
+	font-size: 20px;
+	color: var(--white);
+	text-decoration: none;
+	font-weight: 100;
+	font-family: "Poppins", sans-serif;
+}
